@@ -1,0 +1,20 @@
+
+def main():
+    pass
+
+if __name__ == '__main__':
+    main()
+
+
+class Environnement:
+    def __init__(self, cle, environnementsSuivants):
+        self.num = cle
+        self.suivants = environnementsSuivants
+
+
+environnements = []
+environnements.append( Environnement(0, [1]))
+environnements.append(Environnement(1, [2, 3, 9]))
+
+for i in range(len(environnements)):
+    print(environnements[i].suivants)
