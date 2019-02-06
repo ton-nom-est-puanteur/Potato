@@ -11,10 +11,15 @@ class Environnement:
         self.num = cle
         self.suivants = environnementsSuivants
 
+#instructions/objets pour initialisation
 
 environnements = []
 environnements.append( Environnement(0, [1]))
 environnements.append(Environnement(1, [2, 3, 9]))
 
+#faire la liste des suivants
+
 for i in range(len(environnements)):
     print(environnements[i].suivants)
+
+#afficher scène actuelle 
