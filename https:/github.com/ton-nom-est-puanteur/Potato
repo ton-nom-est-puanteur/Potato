@@ -6,20 +6,29 @@ if __name__ == '__main__':
     main()
 
 
-class Environnement:
-    def __init__(self, cle, environnementsSuivants):
-        self.num = cle
-        self.suivants = environnementsSuivants
 
-#instructions/objets pour initialisation
+class Environnement:
+    #instructions/objets pour initialisation
+    def __init__(self, cle, environnementsSuivants, img):
+        self.num = cle 
+        self.suivants = environnementsSuivants
+        self.image = img
+
+    def afficher(self):
+        print("Le numéro de la salle est : ", self.num)
+        print("Les salles suivantes sont : ", self.suivants)
+
+
 
 environnements = []
-environnements.append( Environnement(0, [1]))
-environnements.append(Environnement(1, [2, 3, 9]))
+environnements.append( Environnement(0, [1, 2], None ))
+environnements.append(Environnement(1, [4, 3, 9], None ))
 
 #faire la liste des suivants
 
-for i in range(len(environnements)):
-    print(environnements[i].suivants)
 
+
+for i in range(len(environnements)):
+    #print(environnements[i].suivants)
+    environnements[i].afficher()
 #afficher scène actuelle 
