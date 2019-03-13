@@ -1,4 +1,3 @@
-
 def main():
     pass
 
@@ -10,14 +9,25 @@ if __name__ == '__main__':
 class Environnement:
     #instructions/objets pour initialisation
     def __init__(self, cle, environnementsSuivants, img, vid):
-        self.num = cle 
+        self.num = cle
         self.suivants = environnementsSuivants
         self.image = img
         self.video = vid
 
     def afficher(self):
-        print("Le numéro de la salle est : ", self.num)
-        print("Les salles suivantes sont : ", self.suivants)
+        print("Le numÃ©ro de la salle est : ", self.num)
+        if self.estFin() :
+            print("Fin du jeu")
+        else:
+            print("Les salles suivantes sont : ", self.suivants)
+
+    def estFin(self):
+        if len(self.suivants) == 0:
+            return True
+        else:
+            return False
+
+#ou return len(self.suivants) == 0:
 
 
 
@@ -55,4 +65,4 @@ environnements.append( Environnement(21, [], None, None ))
 for i in range(len(environnements)):
     #print(environnements[i].suivants)
     environnements[i].afficher()
-#afficher scène actuelle 
+#afficher scene actuelle
