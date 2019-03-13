@@ -15,11 +15,11 @@ class Environnement:
         self.video = vid
 
     def afficher(self):
-        print("Le numÃ©ro de la salle est : ", self.num)
+        print("Le numéro de la salle est : ", self.num)
         if self.estFin() :
             print("Fin du jeu")
         else:
-            print("Les salles suivantes sont : ", self.suivants)
+            print("Les salles suivantes sont, choisissez bien~ : ", self.suivants)
 
     def estFin(self):
         if len(self.suivants) == 0:
